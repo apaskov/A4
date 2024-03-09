@@ -41,21 +41,22 @@
 			</p>
 
 			<ul>
-				<li>Median Reference Line</li>
-				<li>OL Last because weakest</li>
-				<li>Neutral Color Scheme to allow for easy comparison (rainbow much more chaotic); isn't meant to highlight one ethnic group over another</li>
-				<li>2010-2020 because its the last decade, but looked a little smoother than including all years</li>
-				<li>removing other ethnicities for ease of comparison between the most relevant / dominant ethnicities</li>
+				<li><strong>Median Reference Line (Score 1.5):</strong> By including this reference line, we further emphasize the deviation (in particular, the lack thereof) of each bar from the median without without explicitly imposing that conclusion onto the viewer. The orange color also helps constrast the line from the bars. </li>
+				<li><strong>Neutral Color Scheme (Score 2):</strong> The neutral, shaded-blue color scheme allows the viewer to easily observe the data and trends; other color schemes such as "rainbow" were significantly more chaotic and made it harder to observe trends. Also, no emphasis is given to any particular race via this coloring (as opposed to, for instance, coloring all bars a shade of grey, except for White which is red).</li>
+				<li><strong>Bar Chart Split by Misconduct Type and Ethnicity (Score 2):</strong> By giving such a fine-grained look into the data, we allow the reader to check these finer details before deciding on their stance regarding the proposition. In contrast, had we fused all the misconduct types, we would've had a much clearner and uniform graph but this would have been slightly deceptive.</li>
+				<li><strong>Y-axis Scale Begins at 0 (Score 0):</strong> As discussed in Lecture 9, starting the y-axis scaling at 0 better follows general conventions and intutition, but of course also de-emphasizes some of the differences between bars within each misconduct type — which ultimately serves to give more credit to our proposition. </li>
+				<li><strong>Removing smaller Ethnic Groups from the Visualization (Score 1):</strong> The smaller ethnic groups suffered from the issue of greater data sparsity along the split we chose (misconduct type and ethnicity), so we chose to exclude them from the chart. Their inclusion also makes the visualization more dense and thus less immediately understandable. We do note, however, that in one case an excluded group differed more from the median than those included in the chart, so this exclusion can be seen as not fully earnest (i.e. deserving of a score of 2). </li>
 			</ul>
     </section>
 
     <section>
       <h3>AGAINST the Proposition</h3>
+	  <strong>Note:</strong> To construct this visualization, I used publicly available geographic data in the format of a geojson file from the NYC OpenData Government Website (data.cityofnewyork.us); this basically tells Tableau how to draw lines dividing the precincts. I downloaded the file, modified variable types using python, and then loaded the data into Tableau to connect it to the dataset provided to us for the assignment.
 
       <figure>
-				<img src="./A4_files/IMAGE_FILENAME" alt="">
+				<img src="./against.png" alt="">
 				<figcaption>
-          BRIEF CAPTION HERE.
+					NYPD precinct map with precincts colored by the ethnic group with the highest median resolution time for allegations of misconduct by NYPD officers. Data coverage spans 2010-2020.
 				</figcaption>
 			</figure>
 
@@ -64,9 +65,10 @@
 			</p>
 
 			<ul>
-				<li>RATIONALE_1</li>
-				<li>RATIONALE_2</li>
-				<li>RATIONALE_3</li>
+				<li><strong>Map-Based Visualization (Score -0.5):</strong> We chose to use a map as it was the data-split that most strongly corroborated the message against the proposition. Using other visual formats such as a bar chart with another metric along the rows was not as persuasive.</li>
+				<li><strong>Targeted Coloring Scheme (Score -2):</strong> Since colors similar to red/orange are the most striking to the eye, we chose to color Blacks as orange to make them stand out. The second-most common ethnicity (Hispanics) are colored red due to it's visual similarity to orange, giving the illusion that Blacks take up more of the chart (than, for instance, if Hispanics had been colored green). Finally, group White is colored teal to give the sense of contrasting coloring which further highlights the immense presence of orange in the map. </li>
+				<li><strong>Maximum-Based Metric (Score -2):</strong> By attributing the entire region to the ethnic group with the highest median resolution time, we deceptively underscore the Black ethnicity as facing the highest resolution times. In reality, however, the difference between the groups is often very small for a given precinct. Using an alternative, continuous metric (such as color transparency based on how much the region is dominated by a ethnic group, or having a pie-chart in each precinct) would have been significantly more earnest.</li>
+				<li><strong> Charged Titling (Score -1):</strong> Using a strongly-worded title immediately presents the viewer with the stance they "should" take (and is then supported by a deceptive graphic). This is intended to doubly convince the reader of the stance, which as we read in Reading Group week 4 makes them less likely to question things later on. </li>
 			</ul>
     </section>
 
